@@ -1,1 +1,14 @@
 @use "../../abstracts" as *;
+
+.header {
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    background-color: $color-primary;
+    color: $color-white;
+    background-image: url(assets/images/img-header.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 150px 0;
+}
