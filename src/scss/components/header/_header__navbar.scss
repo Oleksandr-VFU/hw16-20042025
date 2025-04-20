@@ -11,14 +11,36 @@
         }
         @include md {
             display: none;
+            @include unlist;
+        }
+
+        &.active {
+            display: block;
+            position: absolute;
+            top: 100%;
+            right: $gap;
+            background-color: rgba($color-gray-dark, 0.95);
+            @include box-shadow;
+        }
+    }
+
+    &-item {
+        @include md {
+            margin: $gap;
         }
     }
 
     &-link {
         display: block;
-        padding: $gap $gap-sm;
         font-size: 1.125rem;
         letter-spacing: 0.09em;
+
+        @include md-min {
+            padding: $gap $gap-sm;
+        }
+        @include md {
+            padding: $gap-sm;
+        }
     }
 }
 

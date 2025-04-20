@@ -304,9 +304,17 @@ h2{
   padding:14px 1px 13px 5px;
   border:3px solid #d53d27;
 }
+.header__navbar-list.active{
+  display:block;
+  position:absolute;
+  top:100%;
+  right:20px;
+  background-color:rgba(68, 89, 110, 0.95);
+  -webkit-box-shadow:-3px 3px 20px -10px #000000;
+          box-shadow:-3px 3px 20px -10px #000000;
+}
 .header__navbar-link{
   display:block;
-  padding:20px 10px;
   font-size:1.125rem;
   letter-spacing:0.09em;
 }
@@ -554,6 +562,9 @@ h2{
     padding:0;
     list-style:none;
   }
+  .header__navbar-link{
+    padding:20px 10px;
+  }
   .header__navbar-btn{
     display:none;
   }
@@ -599,6 +610,15 @@ h2{
   }
   .header__navbar-list{
     display:none;
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  .header__navbar-item{
+    margin:20px;
+  }
+  .header__navbar-link{
+    padding:10px;
   }
   .skills__item-title{
     font-size:1.125rem;
