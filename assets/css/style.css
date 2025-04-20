@@ -311,6 +311,83 @@ h2{
   letter-spacing:0.09em;
 }
 
+.header__navbar-btn{
+  width:30px;
+  height:22.5px;
+  position:relative;
+  margin-left:auto;
+  -webkit-transform:rotate(0deg);
+      -ms-transform:rotate(0deg);
+          transform:rotate(0deg);
+  -webkit-transition:0.5s ease-in-out;
+  transition:0.5s ease-in-out;
+  cursor:pointer;
+}
+.header__navbar-btn-row{
+  display:block;
+  position:absolute;
+  height:3px;
+  width:50%;
+  background:#ffffff;
+  opacity:1;
+  -webkit-transform:rotate(0deg);
+      -ms-transform:rotate(0deg);
+          transform:rotate(0deg);
+  -webkit-transition:0.25s ease-in-out;
+  transition:0.25s ease-in-out;
+}
+.header__navbar-btn-row:nth-child(even){
+  left:50%;
+  border-radius:0 3px 3px 0;
+}
+.header__navbar-btn-row:nth-child(odd){
+  left:0px;
+  border-radius:3px 0 0 3px;
+}
+.header__navbar-btn-row:nth-child(1), .header__navbar-btn-row:nth-child(2){
+  top:0px;
+}
+.header__navbar-btn-row:nth-child(3), .header__navbar-btn-row:nth-child(4){
+  top:9px;
+}
+.header__navbar-btn-row:nth-child(5), .header__navbar-btn-row:nth-child(6){
+  top:18px;
+}
+.header__navbar-btn.active span:nth-child(1), .header__navbar-btn.active span:nth-child(6){
+  -webkit-transform:rotate(45deg);
+      -ms-transform:rotate(45deg);
+          transform:rotate(45deg);
+}
+.header__navbar-btn.active span:nth-child(2), .header__navbar-btn.active span:nth-child(5){
+  -webkit-transform:rotate(-45deg);
+      -ms-transform:rotate(-45deg);
+          transform:rotate(-45deg);
+}
+.header__navbar-btn.active span:nth-child(1){
+  left:2.5px;
+  top:3.5px;
+}
+.header__navbar-btn.active span:nth-child(2){
+  left:calc(50% - 2.5px);
+  top:3.5px;
+}
+.header__navbar-btn.active span:nth-child(3){
+  left:-50%;
+  opacity:0;
+}
+.header__navbar-btn.active span:nth-child(4){
+  left:100%;
+  opacity:0;
+}
+.header__navbar-btn.active span:nth-child(5){
+  left:2.5px;
+  top:14.5px;
+}
+.header__navbar-btn.active span:nth-child(6){
+  left:calc(50% - 2.5px);
+  top:14.5px;
+}
+
 .header__overlay{
   background-color:rgba(45, 54, 81, 0.8);
   position:absolute;
@@ -346,6 +423,9 @@ h2{
     padding:0;
     list-style:none;
   }
+  .header__navbar-btn{
+    display:none;
+  }
 }
 
 @media (992px <= width){
@@ -375,6 +455,11 @@ h2{
   }
   .header__content-title{
     margin:0 0 33px;
+  }
+  .header__menu{
+    background-color:rgba(68, 89, 110, 0.25);
+    -webkit-box-shadow:-3px 3px 20px -10px #000000;
+            box-shadow:-3px 3px 20px -10px #000000;
   }
   .header__navbar-list{
     display:none;
