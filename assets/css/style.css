@@ -151,7 +151,7 @@ template{
 [hidden]{
   display:none;
 }
-.subscribe__container, .about__container, .header__menu-container, .header__content-container{
+.posts__container, .subscribe__container, .about__container, .header__menu-container, .header__content-container{
   width:min(100% - 40px, 1300px);
   margin-inline:auto;
 }
@@ -608,6 +608,64 @@ h2{
   background-color:#d66926;
   border-color:#ffffff;
 }
+
+.posts__grid{
+  display:grid;
+  gap:20px;
+  grid-template-areas:"a1 a1 a2 a3" "a4 a5 a6 a6";
+  grid-template-columns:repeat(4, 1fr);
+}
+
+.posts__item{
+  background-color:#eeeeee;
+  -webkit-transition:background-color 0.3s;
+  transition:background-color 0.3s;
+}
+.posts__item:hover{
+  background-color:rgb(207.4, 207.4, 207.4);
+}
+.posts__item:hover img{
+  -webkit-transform:scale(1.1);
+      -ms-transform:scale(1.1);
+          transform:scale(1.1);
+}
+.posts__item-link{
+  color:inherit;
+}
+.posts__item-picture{
+  overflow:hidden;
+  height:300px;
+}
+.posts__item-image{
+  display:block;
+  -webkit-transition:-webkit-transform 0.3s;
+  transition:-webkit-transform 0.3s;
+  transition:transform 0.3s;
+  transition:transform 0.3s, -webkit-transform 0.3s;
+}
+.posts__item-content{
+  padding:1.25em 1.875em;
+  text-align:center;
+  line-height:1.25;
+}
+.posts__item:nth-of-type(1){
+  grid-area:a1;
+}
+.posts__item:nth-of-type(2){
+  grid-area:a2;
+}
+.posts__item:nth-of-type(3){
+  grid-area:a3;
+}
+.posts__item:nth-of-type(4){
+  grid-area:a4;
+}
+.posts__item:nth-of-type(5){
+  grid-area:a5;
+}
+.posts__item:nth-of-type(6){
+  grid-area:a6;
+}
 @media (576px <= width < 768px){
   .skills__container{
     grid-template-areas:"a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
@@ -672,7 +730,7 @@ h2{
   }
 }
 @media (768px <= width < 992px){
-  .about{
+  .posts, .about{
     padding-top:80px;
     padding-bottom:80px;
   }
@@ -731,7 +789,7 @@ h2{
   }
 }
 @media (992px <= width){
-  .about{
+  .posts, .about{
     padding-top:100px;
     padding-bottom:100px;
   }
@@ -768,7 +826,7 @@ h2{
   }
 }
 @media (width < 768px){
-  .about{
+  .posts, .about{
     padding-top:60px;
     padding-bottom:60px;
   }
