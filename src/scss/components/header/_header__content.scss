@@ -1,52 +1,52 @@
 @use "../../abstracts" as *;
 
 h1 {
-    line-height: 1.2;
+  line-height: 1.2;
 
-    @include lg-min {
-        font-size: 3.75rem;
-    }
-    @include lg-md {
-        font-size: 2.5rem;
-    }
-    @include md {
-        font-size: 1.875rem;
-    }
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+  @include md {
+    font-size: 1.875rem;
+  }
 }
 
 h2 {
-    font-family: $font-header;
-    font-size: 2.5rem;
+  font-family: $font-header;
+  font-size: 2.5rem;
 }
 
 .header__content {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    &-container {
-        @extend %container;
+  &-container {
+    @extend %container;
+  }
+
+  &-title {
+    @include lg-min {
+      margin: 0 0 53px;
     }
-
-    &-title {
-        @include lg-min {
-            margin: 0 0 53px;
-        }
-        @include lg-md {
-            margin: 0 0 43px;
-        }
-        @include md {
-            margin: 0 0 33px;
-        }
+    @include lg-md {
+      margin: 0 0 43px;
     }
-
-    &-action {
-        display: flex;
-        justify-content: center;
-        gap: $gap;
-
-        @include sm {
-            flex-direction: column;
-            align-items: center;
-        }
+    @include md {
+      margin: 0 0 33px;
     }
+  }
+
+  &-action {
+    display: flex;
+    justify-content: center;
+
+    gap: $gap;
+    @include sm {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
 }

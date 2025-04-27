@@ -1,23 +1,26 @@
 @use "../../abstracts" as *;
 
 .header__menu {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    left: 0;
-    z-index: 2;
-    padding: $gap 0;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
 
-    @include md {
-        background-color: rgba($color-gray-dark, 0.25);
-        @include box-shadow;
-    }
+  padding: $gap 0;
 
-    &-container {
-        display: grid;
-        align-items: center;
-        grid-template-columns: auto 1fr;
-        gap: $gap;
-        @extend %container;
-    }
+  @include md {
+    background-color: rgba($color-gray-dark, 0.25);
+
+    @include box-shadow;
+  }
+
+  &-container {
+    display: grid;
+    align-items: center;
+
+    @extend %container;
+    gap: $gap;
+    grid-template-columns: auto 1fr;
+  }
 }
