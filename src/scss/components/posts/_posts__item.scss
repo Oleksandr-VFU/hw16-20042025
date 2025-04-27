@@ -30,10 +30,6 @@
         text-align: center;
         line-height: 1.25;
     }
-    &-title {
-    }
-    &-description {
-    }
 
     @for $i from 1 through 6 {
         &:nth-of-type(#{$i}) {
