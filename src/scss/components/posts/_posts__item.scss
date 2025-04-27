@@ -14,12 +14,16 @@
         color: inherit;
     }
     &-picture {
+        display: flex;
         overflow: hidden;
         height: 300px;
     }
     &-image {
         display: block;
         transition: transform 0.3s;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     &-content {
         padding: 1.25em 1.875em;
